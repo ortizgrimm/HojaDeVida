@@ -9,6 +9,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
   color: #ffffff;
+  padding-top: 80px; /* evita que el nav tape el contenido */
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== Encabezado con imagen ===== */
@@ -30,18 +33,32 @@ body {
 }
 
 .hero-img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  margin-top: 60px;
+  
 }
 
 /* ===== Menú sobre la imagen ===== */
 .nav {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  z-index: 10;
+  position: fixed;
+  top: 0;
+ 
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 30px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.4); /* transparente para que se fusione con el banner */
+  backdrop-filter: blur(5px);      /* efecto elegante de desenfoque */
 }
+
+
 
 .nav-links {
   display: flex;
@@ -51,11 +68,12 @@ body {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 20px;
   border-radius: 4px;
   transition: background 0.3s;
-  background-color: rgba(0, 0, 0, 0.3);
+  
 }
 
 .nav-links a:hover {
@@ -79,7 +97,7 @@ body {
 
 /* ===== Contenido principal ===== */
 main.contenedor {
-  max-width: 1700px;
+  max-width: 1400px;
   margin: 50px auto;
   padding: 0 20px;
   color: #f0f0f0;
@@ -94,7 +112,7 @@ main.contenedor {
 }
 
 .perfil h3 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1.3rem;
   margin: 0.3rem 0;
 }
@@ -111,7 +129,7 @@ main.contenedor {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.8rem 1.5rem;
-  background-color: #00adb5;
+  background-color: #0077b6;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -120,7 +138,7 @@ main.contenedor {
 }
 
 .btn:hover {
-  background-color: #008891;
+  background-color: #024d75;
 }
 
 /* Responsive */
@@ -176,7 +194,7 @@ main.contenedor {
 }
 
 .articulo:hover{
-    box-shadow: 0 4px 10px rgba(17,29,48,26);
+    /* box-shadow: 0 4px 10px rgba(17,29,48,26); */
     color: #ffffff;
     background: #121212;
     transition: .5s;
@@ -189,10 +207,10 @@ main.contenedor {
 }
 
 .articulo > i {
-    color: #00adb5;
+    color: #0077b6;
     font-size: 30px;
     border-radius: 50%;
-    border: 3px solid #00adb5;
+    border: 3px solid #0077b6;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -202,7 +220,7 @@ main.contenedor {
 
 .articulo > a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .articulo > a:hover {
@@ -214,3 +232,133 @@ main.contenedor {
     color: #fff;
     transition: .5s;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* ajusta según la altura del nav */
+}
+
+#educacion {
+  scroll-margin-top: 80px; /* Ajusta según la altura de tu header */
+}
+
+/* seccion experiencia laboral */
+
+/* ====== EXPERIENCIA ====== */
+.experiencia {
+  padding: 60px 20px;
+  background: #121212;
+}
+
+.experiencia .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.experiencia .title h1 {
+  font-size: 2.2rem;
+  color: #ffffff; /* Azul elegante */
+  /* border-bottom: 3px solid #00adb5; */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.exp-card {
+  display: flex;
+  background: #302f2f;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.exp-icon {
+  background: #181a1c; /* color lateral */
+  color: #d3d6d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  font-size: 2rem;
+}
+
+.exp-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.exp-year {
+  font-weight: bold;
+  color: #0077b6;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.exp-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.exp-content p {
+  margin: 5px 0;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* =========== habilidades =========== */
+
+.habilidades {
+  padding: 60px 20px;
+  background-color: #121212;
+  text-align: center;
+}
+
+.habilidades h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.habilidad-card {
+  background: rgb(218, 218, 218);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.habilidad-card i {
+  font-size: 2.5rem;
+  color: #0077b6; /* azul que combine con tu línea de diseño */
+  margin-bottom: 15px;
+}
+
+.habilidad-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.habilidad-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
