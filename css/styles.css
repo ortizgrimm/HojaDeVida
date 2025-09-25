@@ -1,0 +1,216 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* ===== Encabezado con imagen ===== */
+.hero-content {
+  text-align: left;
+}
+
+.hero-content .perfil {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== Menú sobre la imagen ===== */
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hamburguer{
+    width: 80px;
+    height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.hamburguer>i {
+    font-size: 25px;
+    line-height: 80px;
+}
+
+/* ===== Contenido principal ===== */
+main.contenedor {
+  max-width: 1700px;
+  margin: 50px auto;
+  padding: 0 20px;
+  color: #f0f0f0;
+  text-align: left;
+}
+
+
+
+.perfil h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.perfil h3 {
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin: 0.3rem 0;
+}
+
+.perfil p {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #00adb5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #008891;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 10px;
+    display: none; /* Activar con JS si haces hamburguesa */
+  }
+
+  .perfil h1 {
+    font-size: 2.2rem;
+  }
+
+  .perfil h3 {
+    font-size: 1rem;
+  }
+
+  .perfil p {
+    font-size: 1rem;
+  }
+}
+
+.title {
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.educacion{
+    background: #121212;
+}
+
+.content-educacion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: space-around
+}
+
+.articulo{
+    width: 23%;
+    background: #302f2f;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.articulo:hover{
+    box-shadow: 0 4px 10px rgba(17,29,48,26);
+    color: #ffffff;
+    background: #121212;
+    transition: .5s;
+}
+
+.articulo > h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.articulo > i {
+    color: #00adb5;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 3px solid #00adb5;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    line-height: 48px;
+}
+
+.articulo > a {
+    text-decoration: none;
+    color: black;
+}
+
+.articulo > a:hover {
+    color: #fff;
+    transition: .5s;
+}
+
+.articulo > i:hover {
+    color: #fff;
+    transition: .5s;
+}
