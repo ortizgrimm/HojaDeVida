@@ -468,6 +468,15 @@ html {
 }
 
 
+/* Ajusta el tamaño de la imagen al abrirla en el modal */
+.modal img {
+  max-width: 90%;   /* que nunca supere el 90% del ancho de la pantalla */
+  max-height: 80vh; /* que nunca supere el 80% del alto de la pantalla */
+  object-fit: contain; /* mantiene proporciones sin recortar */
+  border-radius: 10px; /* opcional: esquinas redondeadas */
+}
+
+
 
 
 /* ==== SECCIÓN CONTACTO ==== */
@@ -481,7 +490,7 @@ html {
 .contacto h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00adb5;
+  color: #0077b6;
 }
 
 .contacto p {
@@ -506,7 +515,7 @@ html {
 }
 
 .info-item i {
-  color: #00adb5;
+  color: #0077b6;
   font-size: 1.3rem;
 }
 
@@ -524,7 +533,7 @@ html {
 }
 
 .social-links a:hover {
-  color: #00adb5;
+  color: #0077b6;
   transform: scale(1.2);
 }
 
@@ -539,7 +548,7 @@ html {
 .filosofia h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #ffffff; /* Azul de tus iconos */
+  color: #ffffff; 
 }
 
 .filosofia blockquote {
