@@ -83,11 +83,11 @@ body {
 .hamburguer{
     width: 80px;
     height: 80px;
-    display: none;
     text-align: center;
     z-index: 100;
     cursor: pointer;
     transition: color 0.5s ease-in;
+    display: none;
 }
 
 .hamburguer>i {
@@ -404,7 +404,7 @@ html {
 .about-text h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #00adb5;
+  color: #ffffff;
 }
 
 .about-text p {
@@ -464,7 +464,7 @@ html {
 }
 
 .close:hover {
-  color: #f00;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -585,16 +585,18 @@ body {
 }
 
 /* En móvil, ocultar menú y mostrar hamburguesa */
+/* En móvil, ocultar menú y mostrar hamburguesa */
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* se oculta el menú */
     flex-direction: column;
-    background: #121212;
+    background: #141414;
     position: absolute;
     top: 60px; /* debajo de la barra */
     right: 0;
     width: 200px;
     padding: 20px;
+    border-radius: 8px;
   }
 
   .nav-links.active {
@@ -602,12 +604,9 @@ body {
   }
 
   .hamburguer {
-    display: block; /* solo en móvil */
-    cursor: pointer;
+    display: block; /* aparece solo en móvil */
   }
 }
 
-/* En escritorio, ocultar hamburguesa */
-.hamburguer {
-  display: none;
-}
+
+

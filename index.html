@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/bams.png" type="image/png" />
   <link rel="stylesheet" href="css/styles.css" />
-  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Danilo Ortiz CV</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
         <a href="#contacto">Contacto</a>
       </div>
       <div class="hamburguer">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fas fa-bars"></i>
       </div>
     </nav>
   </header>
@@ -223,7 +223,7 @@ los macroprocesos estratégicos, misionales, de apoyo, evaluación y control.</p
 <!-- SECCIÓN CONTACTO -->
 <section id="contacto" class="contacto">
   <div class="contenedor contact-content">
-    <h1>Contacto</h1>
+    <h1>CONTACTO</h1>
     <p>¿Quieres ponerte en contacto conmigo? Aquí te dejo mis datos:</p>
 
     <div class="contact-info">
@@ -264,14 +264,16 @@ los macroprocesos estratégicos, misionales, de apoyo, evaluación y control.</p
   </main>
 <script src="https://kit.fontawesome.com/4fc7dbea62.js" crossoring="anonymous"></script>
 
-<script>
-  const hamburguer = document.querySelector(".hamburguer");
-  const navLinks = document.querySelector(".nav-links");
 
-  hamburguer.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+<script>
+  const hamburger = document.querySelector('.hamburguer');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
 </script>
+
 
 
 <script>
