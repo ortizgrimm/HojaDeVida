@@ -173,24 +173,30 @@ main.contenedor {
     text-align: center;
 }
 
+/* ===== seccion educacion ===== */
+
 .educacion{
     background: #121212;
 }
 
 .content-educacion{
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    justify-content: space-around
+    justify-content: center;   /* centra las tarjetas */
+    gap: 20px;                 /* espacio uniforme entre tarjetas */
+   
 }
 
 .articulo{
-    width: 23%;
+    flex: 1 1 calc(20% - 20px); /* 5 tarjetas por fila restando el gap */
+     max-width: calc(20% - 20px);
     background: #302f2f;
     margin-top: 50px;
     border-radius: 10px;
     padding: 45px 30px 60px 30px;
     transition: 0.5s;
+    box-sizing: border-box;
 }
 
 .articulo:hover{
@@ -242,6 +248,21 @@ html {
   scroll-margin-top: 80px; /* Ajusta según la altura de tu header */
 }
 
+@media (max-width: 1200px) {
+  .articulo {
+    flex: 1 1 30%; /* 3 por fila en pantallas medianas */
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .articulo {
+    flex: 1 1 100%; /* 1 por fila en móviles */
+    max-width: 100%;
+  }
+}
+
+
 /* seccion experiencia laboral */
 
 /* ====== EXPERIENCIA ====== */
@@ -249,6 +270,7 @@ html {
   padding: 60px 20px;
   background: #121212;
 }
+
 
 .experiencia .title {
   text-align: center;
@@ -362,3 +384,230 @@ html {
   color: #555;
 }
 
+
+/* ==== INFORMACIÓN PERSONAL ==== */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00adb5;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #fffefe;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #f00;
+}
+
+
+
+
+/* ==== SECCIÓN CONTACTO ==== */
+.contacto {
+  padding: 80px 20px;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+.contacto h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00adb5;
+}
+
+.contacto p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+.info-item i {
+  color: #00adb5;
+  font-size: 1.3rem;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: #00adb5;
+  transform: scale(1.2);
+}
+
+/* ===== SECCIÓN FILOSOFÍA ===== */
+.filosofia {
+  background: #121212; /* Fondo oscuro para mantener el estilo */
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.filosofia h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffffff; /* Azul de tus iconos */
+}
+
+.filosofia blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  background: #1e1e1e;
+  padding: 30px;
+  border-left: 5px solid #0077b6;
+  border-radius: 8px;
+}
+
+.filosofia .autor {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #cccccc;
+}
+
+/* ================= responsive ============= */
+/* Hacer que imágenes y videos nunca se salgan del contenedor */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajustar tipografía para pantallas pequeñas */
+body {
+  font-size: 16px; /* base */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Menú normal en escritorio */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* En móvil, ocultar menú y mostrar hamburguesa */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* se oculta el menú */
+    flex-direction: column;
+    background: #121212;
+    position: absolute;
+    top: 60px; /* debajo de la barra */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex; /* se activa con JS */
+  }
+
+  .hamburguer {
+    display: block; /* solo en móvil */
+    cursor: pointer;
+  }
+}
+
+/* En escritorio, ocultar hamburguesa */
+.hamburguer {
+  display: none;
+}

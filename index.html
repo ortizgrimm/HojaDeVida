@@ -6,6 +6,7 @@
   <meta name="title" content="Hoja de vida Danilo Ortiz" />
   <meta name="keywords" content="Curriculum, hoja de vida, Danilo Ortiz, administrador de empresas" />
   <meta name="description" content="Portal para conocer el curriculum de Danilo Ortiz" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/bams.png" type="image/png" />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
@@ -15,7 +16,7 @@
 
   <!-- 🔼 Encabezado: solo imagen y menú -->
   <header id="inicio" class="hero">
-    <img src="img/banner.png" alt="Danilo Ortiz Banner" class="hero-img" />
+    <img src="img/banner (2).png" alt="Danilo Ortiz Banner" class="hero-img" />
 
     <nav class="nav">
       <div class="nav-links">
@@ -23,7 +24,6 @@
         <a href="#educacion">Educación</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#habilidades">Habilidades</a>
-        <a href="#certificados">Certificados</a>
         <a href="#contacto">Contacto</a>
       </div>
       <div class="hamburguer">
@@ -56,31 +56,38 @@
             </div>
             <div class="articulo">
                 <i class="fa-solid fa-user-tie"></i>
+                <h3>Licenciatura En Matemáticas</h3>
+                <p>Universidad Nacional Abierta y a Distancia - UNAD  </p>
+                <p>Actualmente I Semestre</p>
+                <a class="btn" href="docs/carnetUNAD.pdf" target="_blank">Ver Documento</a>
+            </div>
+            <div class="articulo">
+                <i class="fa-solid fa-user-tie"></i>
                 <h3>Administración de Empresas</h3>
                 <p>Universidad Francisco de Paula Santander Ocaña</p>
                 <p>2024</p>
-                <a class="btn" href="docs/HV Danilo Ortiz  .pdf" target="_blank">Ver Documento</a>
+                <a class="btn" href="docs/profesional.pdf" target="_blank">Ver Documento</a>
             </div>
              <div class="articulo">
                 <i class="fa-solid fa-person-chalkboard"></i>
                 <h3>Diplomado Pedagoía Básica</h3>
                 <p>Politécnico de Colombia</p>
                 <p>2024</p>
-                <a class="btn" href="docs/HV Danilo Ortiz  .pdf" target="_blank">Ver Documento</a>
+                <a class="btn" href="https://drive.google.com/file/d/1TJaaEM3k2Dl4lLEM-iKmnKUnFDxztjPf/view?usp=sharing" target="_blank">Ver Documento</a>
             </div>
             <div class="articulo">
                 <i class="fa-solid fa-person-chalkboard"></i>
                 <h3>Diplomado Pedagoía Para Profesionales no Licenciados</h3>
                 <p>Politécnico de Colombia</p>
                 <p>2024</p>
-                <a class="btn" href="docs/HV Danilo Ortiz  .pdf" target="_blank">Ver Documento</a>
+                <a class="btn" href="https://drive.google.com/file/d/1TDcs9v5Sjo4T_VJ8SU4DVbftzsaRKfH7/view?usp=drive_link" target="_blank">Ver Documento</a>
             </div>
             <div class="articulo">
                 <i class="fa-solid fa-computer"></i>
                 <h3>Técnico Profesional en Informática</h3>
                 <p>Universidad Francisco de Paula Santander Ocaña</p>
                 <p>2017</p>
-                <a class="btn" href="docs/HV Danilo Ortiz  .pdf" target="_blank">Ver Documento</a>
+                <a class="btn" href="docs/tecnico.pdf" target="_blank">Ver Documento</a>
             </div>
         
         </div>
@@ -173,9 +180,121 @@ los macroprocesos estratégicos, misionales, de apoyo, evaluación y control.</p
   </div>
 </section>
 
+<!-- SECCIÓN INFORMACIÓN PERSONAL -->
+<section class="about-section">
+  <div class="about-text">
+    <h2>SOBRE MÍ</h2>
+    <p>
+      Soy una persona apasionada por el aprendizaje constante, la creatividad y el servicio a los demás. Me gusta combinar mis conocimientos en administración e informática con mi amor por la música y el desarrollo personal. He sido instructor de teoría musical y asesor de estudiantes en matemáticas e inglés, lo que me ha permitido compartir conocimiento y apoyar el crecimiento académico y personal de otros. También disfruto dar charlas y espacios de formación, donde transmito mi experiencia con entusiasmo y empatía. En mi tiempo libre, me conecto con la naturaleza, toco el piano, aprendo nuevas tecnologías y comparto momentos significativos con mi familia y amigos.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <img src="img/FB_IMG_1542905035804.jpg" alt="Imagen 1" />
+    <img src="img/Gemini_Generated_Image_cvotxocvotxocvot.png" alt="Imagen 2" />
+    <img src="img/IMG-20191204-WA0061.jpg" alt="Imagen 3" />
+    <img src="img/IMG_20190924_190455.jpg" alt="Imagen 4" />
+    <img src="img/Gemini_Generated_Image_nnbah5nnbah5nnba.png" alt="Imagen 5" />
+    <img src="img/IMG_20171008_123540_834.jpg" alt="Imagen 6" />
+  </div>
+</section>
+
+<!-- Modal para imagen ampliada -->
+<div class="modal" id="imgModal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg" />
+</div>
+
+<!-- SECCIÓN FILOSOFÍA PERSONAL -->
+<section id="filosofia" class="filosofia">
+  <div class="contenedor filosofia-content">
+    <h1>Filosofía Personal</h1>
+    <blockquote>
+      "Creo que el conocimiento solo crece cuando se comparte.  
+      Mi propósito es aprender, enseñar y ayudar a las personas a descubrir su máximo potencial,  
+      combinando mi amor por la música, la educación y la tecnología."
+    </blockquote>
+    <p class="autor">— Danilo Ortiz</p>
+  </div>
+</section>
+
+
+
+<!-- SECCIÓN CONTACTO -->
+<section id="contacto" class="contacto">
+  <div class="contenedor contact-content">
+    <h1>Contacto</h1>
+    <p>¿Quieres ponerte en contacto conmigo? Aquí te dejo mis datos:</p>
+
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>danilobgomez@gmail.com</span>
+        <span>u.ortizdanilo@gmail.com</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+57 300 383 5082</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Ocaña, Norte de Santander, Colombia</span>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/danilo-ortiz-720041265/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/ortizgrimm" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/ortizgrimm" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/danilo.322103" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
 
 
   </main>
 <script src="https://kit.fontawesome.com/4fc7dbea62.js" crossoring="anonymous"></script>
+
+<script>
+  const hamburguer = document.querySelector(".hamburguer");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburguer.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const images = document.querySelectorAll(".gallery img");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => (modal.style.display = "none");
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
+
+
+
 </body>
 </html>
